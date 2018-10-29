@@ -1,10 +1,12 @@
 ﻿using BloodGiver.Models;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using System.Collections.Generic;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
+
 
 namespace BloodGiver.Services
 {
@@ -18,11 +20,11 @@ namespace BloodGiver.Services
                 Password = password,
                 ConfirmPassword = confirmPassword
             };
-
+            
             var httpClient = new HttpClient();
             var json = JsonConvert.SerializeObject(registerModel);
-            var content = new StringContent(json, Encoding.UTF8, "applicaton/json");
-            var response = await httpClient.PostAsync("bloodgiver.gear.host/api/Account/Register", content);
+            var content = new StringContent(json, Encoding.UTF8, "application/json");
+            var response = await httpClient.PostAsync("http://bloodgiver.gear.host/api/Account/Register", content);
             return response.IsSuccessStatusCode;
         }
 
@@ -32,22 +34,26 @@ namespace BloodGiver.Services
             {
                 new KeyValuePair<string, string>("username", email), 
                 new KeyValuePair<string, string>("password", password), 
-                new KeyValuePair<string, string>("grant_type", password), 
+                new KeyValuePair<string, string>("grant_type", "password"), 
             };
 
-            var request = new HttpRequestMessage(HttpMethod.Post, "bloodgiver.gear.host/Token")
-            {
-                Content = new FormUrlEncodedContent(keyvalues)
-            };
+            var request = new HttpRequestMessage(HttpMethod.Post, "http://bloodgiver.gear.host/Token");
+            request.Content = new FormUrlEncodedContent(keyvalues);
             var httpClient = new HttpClient();
             var response = await httpClient.SendAsync(request);
-            var content = response.Content.ReadAsStringAsync();
+            var content = await response.Content.ReadAsStringAsync();
+            JObject jObject = JsonConvert.DeserializeObject<dynamic>(content);
+            var accessToken = jObject.Value<string>("access_token");
+
+            Settings.AccessToken = accessToken;
+            Settings.UserName = email;
+            Settings.Password = password;
             return response.IsSuccessStatusCode;
         }
 
         public async Task<List<BloodUser>> FindBloodGivers(string country, string bloodtype)
         {
-            var bloodApiUrl = "bloodgiver.gear.host/api/BloodUsers";
+            var bloodApiUrl = "http://bloodgiver.gear.host/api/BloodUsers";
             var httpClient = new HttpClient();
             httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("bearer", "we will it later");
             var json = await httpClient.GetStringAsync($"{bloodApiUrl}?bloodGroup={bloodtype}&country={country}");
@@ -56,7 +62,7 @@ namespace BloodGiver.Services
 
         public async Task<List<BloodUser>> LatestBloodGivers()
         {
-            var bloodApiUrl = "bloodgiver.gear.host/api/BloodUsers";
+            var bloodApiUrl = "http://bloodgiver.gear.host/api/BloodUsers";
             var httpClient = new HttpClient();
             httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("bearer", "we will it later");
             var json = await httpClient.GetStringAsync(bloodApiUrl);
@@ -65,7 +71,7 @@ namespace BloodGiver.Services
 
         public async Task<bool> RegisterGiver(BloodUser bloodUser)
         {
-            var bloodApiUrl = "bloodgiver.gear.host/api/BloodUsers";
+            var bloodApiUrl = "http://bloodgiver.gear.host/api/BloodUsers";
             var json = JsonConvert.SerializeObject(bloodUser);        
             var httpClient = new HttpClient();
             var content = new StringContent(json, Encoding.UTF8, "applicaton/json");

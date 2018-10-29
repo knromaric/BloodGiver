@@ -1,3 +1,4 @@
+using BloodGiver.Pages;
 using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -10,8 +11,14 @@ namespace BloodGiver
 		public App ()
 		{
 			InitializeComponent();
-
-			MainPage = new MainPage();
+            if (!string.IsNullOrEmpty(Settings.AccessToken))
+            { 
+                MainPage = new NavigationPage(new HomePage());
+            }
+            else if(string.IsNullOrEmpty(Settings.UserName) && string.IsNullOrEmpty(Settings.Password))
+            {
+                MainPage = new NavigationPage(new SignInPage());
+            }
 		}
 
 		protected override void OnStart ()
