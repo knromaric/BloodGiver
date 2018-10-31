@@ -4,5 +4,6 @@
     <SelectedDevice>Google Nexus 7</SelectedDevice>
     <DefaultDevice>my_device</DefaultDevice>
     <ProjectView>ShowAllFiles</ProjectView>
+    <AndroidDesignerPreferredTheme>Theme.DeviceDefault.NoActionBar.Fullscreen</AndroidDesignerPreferredTheme>
   </PropertyGroup>
 </Project>

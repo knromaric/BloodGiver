@@ -12,3 +12,8 @@ C:\Users\romaric\Documents\PROJECTS\BloodGiver\BloodGiver\BloodGiver\BloodGiver\
 C:\Users\romaric\Documents\PROJECTS\BloodGiver\BloodGiver\BloodGiver\BloodGiver\obj\Debug\netstandard2.0\XamlC.stamp
 C:\Users\romaric\Documents\PROJECTS\BloodGiver\BloodGiver\BloodGiver\BloodGiver\obj\Debug\netstandard2.0\BloodGiver.dll
 C:\Users\romaric\Documents\PROJECTS\BloodGiver\BloodGiver\BloodGiver\BloodGiver\obj\Debug\netstandard2.0\BloodGiver.pdb
+C:\Users\romaric\Documents\PROJECTS\BloodGiver\BloodGiver\BloodGiver\BloodGiver\obj\Debug\netstandard2.0\Pages\FindBloodPage.xaml.g.cs
+C:\Users\romaric\Documents\PROJECTS\BloodGiver\BloodGiver\BloodGiver\BloodGiver\obj\Debug\netstandard2.0\Pages\HelpPage.xaml.g.cs
+C:\Users\romaric\Documents\PROJECTS\BloodGiver\BloodGiver\BloodGiver\BloodGiver\obj\Debug\netstandard2.0\Pages\LatestGiversPage.xaml.g.cs
+C:\Users\romaric\Documents\PROJECTS\BloodGiver\BloodGiver\BloodGiver\BloodGiver\obj\Debug\netstandard2.0\Pages\RegisterBloodPage.xaml.g.cs
+C:\Users\romaric\Documents\PROJECTS\BloodGiver\BloodGiver\BloodGiver\BloodGiver\obj\Debug\netstandard2.0\Pages\GiversListPage.xaml.g.cs

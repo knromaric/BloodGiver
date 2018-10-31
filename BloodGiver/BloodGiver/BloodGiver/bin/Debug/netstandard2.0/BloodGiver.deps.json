@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETStandard,Version=v2.0/",
-    "signature": "799e48d115434a3dccab64596e628bfc5bf66b48"
+    "signature": "8423c7ff8fe8f15acb051e7a57b8d722bc5f355a"
   },
   "compilationOptions": {},
   "targets": {
@@ -13,7 +13,6 @@
           "NETStandard.Library": "2.0.3",
           "Newtonsoft.Json": "11.0.2",
           "Xam.Plugins.Settings": "3.1.1",
-          "Xamarin.Essentials": "0.11.0-preview",
           "Xamarin.Forms": "3.3.0.912540"
         },
         "runtime": {
@@ -36,11 +35,6 @@
           "lib/netstandard2.0/Newtonsoft.Json.dll": {}
         }
       },
-      "System.Numerics.Vectors/4.5.0": {
-        "runtime": {
-          "lib/netstandard2.0/System.Numerics.Vectors.dll": {}
-        }
-      },
       "Xam.Plugins.Settings/3.1.1": {
         "dependencies": {
           "NETStandard.Library": "2.0.3"
@@ -48,14 +42,6 @@
         "runtime": {
           "lib/netstandard1.0/Plugin.Settings.Abstractions.dll": {},
           "lib/netstandard1.0/Plugin.Settings.dll": {}
-        }
-      },
-      "Xamarin.Essentials/0.11.0-preview": {
-        "dependencies": {
-          "System.Numerics.Vectors": "4.5.0"
-        },
-        "runtime": {
-          "lib/netstandard2.0/Xamarin.Essentials.dll": {}
         }
       },
       "Xamarin.Forms/3.3.0.912540": {
@@ -101,26 +87,12 @@
       "path": "newtonsoft.json/11.0.2",
       "hashPath": "newtonsoft.json.11.0.2.nupkg.sha512"
     },
-    "System.Numerics.Vectors/4.5.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-AK4wVgiJqQQCALZ+2ZFY3UqEyIunVlNSBLAHNyI8bJfLT5c9kHZH3nVF2KUWYd1/2POvaz3xx9K6nSKo6m78Ew==",
-      "path": "system.numerics.vectors/4.5.0",
-      "hashPath": "system.numerics.vectors.4.5.0.nupkg.sha512"
-    },
     "Xam.Plugins.Settings/3.1.1": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-EQEYQJ64ZLqui5GWkLMavgqitHxwUHZHryTzUD1021UBuz1XwDSjPL45W0K4pPXjz9oKbg7YpRXKPR1luPr/5Q==",
       "path": "xam.plugins.settings/3.1.1",
       "hashPath": "xam.plugins.settings.3.1.1.nupkg.sha512"
-    },
-    "Xamarin.Essentials/0.11.0-preview": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-12YM3Na6inAHj5imaYFVVq2qeLXJ7ZUzrje2AvOu2nDTj0cZYlOAfaP2N7otqpiIF8SV9TQOa8GafgGd4fYOyw==",
-      "path": "xamarin.essentials/0.11.0-preview",
-      "hashPath": "xamarin.essentials.0.11.0-preview.nupkg.sha512"
     },
     "Xamarin.Forms/3.3.0.912540": {
       "type": "package",

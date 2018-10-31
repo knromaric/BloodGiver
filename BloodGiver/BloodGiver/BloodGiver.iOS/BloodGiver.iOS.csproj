@@ -174,4 +174,25 @@
   <ItemGroup>
     <BundleResource Include="Resources\bloodlogo%403x.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\bghome.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\find.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\register.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\lineh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\linev.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\latest.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\info.png" />
+  </ItemGroup>
 </Project>
