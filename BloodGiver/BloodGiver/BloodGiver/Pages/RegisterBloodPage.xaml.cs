@@ -16,5 +16,15 @@ namespace BloodGiver.Pages
 		{
 			InitializeComponent ();
 		}
-	}
+
+        private void TapOpenCamera_Tapped(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnSubmit_Clicked(object sender, EventArgs e)
+        {
+
+        }
+    }
 }

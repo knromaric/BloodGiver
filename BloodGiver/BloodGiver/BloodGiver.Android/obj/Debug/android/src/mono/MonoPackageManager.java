@@ -110,6 +110,8 @@ class MonoPackageManager_Resources {
 		"BloodGiver.dll",
 		"FormsViewGroup.dll",
 		"Newtonsoft.Json.dll",
+		"Plugin.Messaging.Abstractions.dll",
+		"Plugin.Messaging.dll",
 		"Plugin.Settings.Abstractions.dll",
 		"Plugin.Settings.dll",
 		"Xamarin.Android.Arch.Core.Common.dll",

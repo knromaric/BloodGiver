@@ -51,12 +51,12 @@ namespace BloodGiver.Services
             return response.IsSuccessStatusCode;
         }
 
-        public async Task<List<BloodUser>> FindBloodGivers(string country, string bloodtype)
+        public async Task<List<BloodUser>> FindBloodGivers(string country, string BloodGroup)
         {
             var bloodApiUrl = "http://bloodgiver.gear.host/api/BloodUsers";
             var httpClient = new HttpClient();
-            httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("bearer", "we will it later");
-            var json = await httpClient.GetStringAsync($"{bloodApiUrl}?bloodGroup={bloodtype}&country={country}");
+            httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("bearer", Settings.AccessToken);
+            var json = await httpClient.GetStringAsync($"{bloodApiUrl}?bloodGroup={BloodGroup}&country={country}");
             return JsonConvert.DeserializeObject<List<BloodUser>>(json);
         }
 
@@ -64,7 +64,7 @@ namespace BloodGiver.Services
         {
             var bloodApiUrl = "http://bloodgiver.gear.host/api/BloodUsers";
             var httpClient = new HttpClient();
-            httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("bearer", "we will it later");
+            httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("bearer", Settings.AccessToken);
             var json = await httpClient.GetStringAsync(bloodApiUrl);
             return JsonConvert.DeserializeObject<List<BloodUser>>(json);
         }
@@ -75,7 +75,7 @@ namespace BloodGiver.Services
             var json = JsonConvert.SerializeObject(bloodUser);        
             var httpClient = new HttpClient();
             var content = new StringContent(json, Encoding.UTF8, "applicaton/json");
-            httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("bearer", "we will it later");
+            httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("bearer", Settings.AccessToken);
             var response = await httpClient.PostAsync(bloodApiUrl, content);
             return response.IsSuccessStatusCode;
         }

@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETStandard,Version=v2.0/",
-    "signature": "8423c7ff8fe8f15acb051e7a57b8d722bc5f355a"
+    "signature": "7a67defbc58e54864f7848edd1446f40a65c5024"
   },
   "compilationOptions": {},
   "targets": {
@@ -12,6 +12,7 @@
           "Microsoft.CSharp": "4.5.0",
           "NETStandard.Library": "2.0.3",
           "Newtonsoft.Json": "11.0.2",
+          "Xam.Plugins.Messaging": "5.1.0",
           "Xam.Plugins.Settings": "3.1.1",
           "Xamarin.Forms": "3.3.0.912540"
         },
@@ -33,6 +34,15 @@
       "Newtonsoft.Json/11.0.2": {
         "runtime": {
           "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        }
+      },
+      "Xam.Plugins.Messaging/5.1.0": {
+        "dependencies": {
+          "NETStandard.Library": "2.0.3"
+        },
+        "runtime": {
+          "lib/netstandard1.0/Plugin.Messaging.Abstractions.dll": {},
+          "lib/netstandard1.0/Plugin.Messaging.dll": {}
         }
       },
       "Xam.Plugins.Settings/3.1.1": {
@@ -86,6 +96,13 @@
       "sha512": "sha512-IvJe1pj7JHEsP8B8J8DwlMEx8UInrs/x+9oVY+oCD13jpLu4JbJU2WCIsMRn5C4yW9+DgkaO8uiVE5VHKjpmdQ==",
       "path": "newtonsoft.json/11.0.2",
       "hashPath": "newtonsoft.json.11.0.2.nupkg.sha512"
+    },
+    "Xam.Plugins.Messaging/5.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-CpwjJN63J9uk4FN2oh4Ldn2HtNaYki/4hpe1CypuFylyFKa39kEfddPcbmXGam6LiTXGIYd0tnTqrijCTNMvaA==",
+      "path": "xam.plugins.messaging/5.1.0",
+      "hashPath": "xam.plugins.messaging.5.1.0.nupkg.sha512"
     },
     "Xam.Plugins.Settings/3.1.1": {
       "type": "package",

@@ -6,6 +6,8 @@ C:\Users\romaric\Documents\PROJECTS\BloodGiver\BloodGiver\BloodGiver\BloodGiver.
 C:\Users\romaric\Documents\PROJECTS\BloodGiver\BloodGiver\BloodGiver\BloodGiver.Android\obj\Debug\android\assets\Mono.Android.dll
 C:\Users\romaric\Documents\PROJECTS\BloodGiver\BloodGiver\BloodGiver\BloodGiver.Android\obj\Debug\android\assets\mscorlib.dll
 C:\Users\romaric\Documents\PROJECTS\BloodGiver\BloodGiver\BloodGiver\BloodGiver.Android\obj\Debug\android\assets\Newtonsoft.Json.dll
+C:\Users\romaric\Documents\PROJECTS\BloodGiver\BloodGiver\BloodGiver\BloodGiver.Android\obj\Debug\android\assets\Plugin.Messaging.Abstractions.dll
+C:\Users\romaric\Documents\PROJECTS\BloodGiver\BloodGiver\BloodGiver\BloodGiver.Android\obj\Debug\android\assets\Plugin.Messaging.dll
 C:\Users\romaric\Documents\PROJECTS\BloodGiver\BloodGiver\BloodGiver\BloodGiver.Android\obj\Debug\android\assets\Plugin.Settings.Abstractions.dll
 C:\Users\romaric\Documents\PROJECTS\BloodGiver\BloodGiver\BloodGiver\BloodGiver.Android\obj\Debug\android\assets\Plugin.Settings.dll
 C:\Users\romaric\Documents\PROJECTS\BloodGiver\BloodGiver\BloodGiver\BloodGiver.Android\obj\Debug\android\assets\System.Core.dll

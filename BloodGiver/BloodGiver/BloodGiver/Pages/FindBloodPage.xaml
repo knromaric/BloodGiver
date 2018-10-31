@@ -14,7 +14,7 @@
             </Picker>
             <Picker Title="Select Country" TextColor="#A5A7A8" x:Name="PickerCountry">
                 <Picker.Items>
-                    <x:String>Cameroon</x:String>
+                    <x:String>CMR</x:String>
                     <x:String>USA</x:String>
                     <x:String>Senegal</x:String>
                     <x:String>Gabon</x:String>
