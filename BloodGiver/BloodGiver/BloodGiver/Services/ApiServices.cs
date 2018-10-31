@@ -74,7 +74,7 @@ namespace BloodGiver.Services
             var bloodApiUrl = "http://bloodgiver.gear.host/api/BloodUsers";
             var json = JsonConvert.SerializeObject(bloodUser);        
             var httpClient = new HttpClient();
-            var content = new StringContent(json, Encoding.UTF8, "applicaton/json");
+            var content = new StringContent(json, Encoding.UTF8, "application/json");
             httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("bearer", Settings.AccessToken);
             var response = await httpClient.PostAsync(bloodApiUrl, content);
             return response.IsSuccessStatusCode;

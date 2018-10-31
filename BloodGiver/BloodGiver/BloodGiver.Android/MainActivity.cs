@@ -1,11 +1,7 @@
-﻿using System;
-
-using Android.App;
+﻿using Android.App;
 using Android.Content.PM;
-using Android.Runtime;
-using Android.Views;
-using Android.Widget;
 using Android.OS;
+using Plugin.CurrentActivity;
 
 namespace BloodGiver.Droid
 {
@@ -19,12 +15,10 @@ namespace BloodGiver.Droid
 
             base.OnCreate(bundle);
             global::Xamarin.Forms.Forms.Init(this, bundle);
+            CrossCurrentActivity.Current.Init(this, bundle);
             LoadApplication(new App());
         }
-        public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
-        {
-            base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
-        }
+
     }
 }
 
